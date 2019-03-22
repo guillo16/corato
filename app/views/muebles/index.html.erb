@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <h1>muebles</h1>
+    <% @muebles.each do |mueble| %>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <%= link_to image_tag(mueble.photo), mueble_path(mueble) %>
+          <div class="caption">
+            <h3><%= link_to mueble.name, mueble_path(mueble) %></h3>
+            <p><%= mueble.name %></p>
+            <p>Amount: <%= humanized_money_with_symbol(mueble.price) %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+class MueblesController < ApplicationController
+end

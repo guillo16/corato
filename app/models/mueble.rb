@@ -1,0 +1,2 @@
+class Mueble < ApplicationRecord
+end

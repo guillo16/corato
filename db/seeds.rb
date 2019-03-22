@@ -10,6 +10,6 @@ puts 'Cleaning database...'
 Mueble.destroy_all
 
 puts 'Creating muebles...'
-Mueble.create!(sku: 'co-001', name: 'comoda', category: 'habitacion', photo_url: 'https://cdn1.mueblesrey.com/2832-large_default/mueble-para-tv-delta.jpg')
-Mueble.create!(sku: 'co-002', name: 'mesa', category: 'living', photo_url: 'https://cdn.jysk.es/media/catalog/product/cache/9/thumbnail/960x/d34aaef3401395db2614ec4ce2acbbee/3/6/36511001_1__1.jpg')
+Mueble.create!(sku: 'co-001', name: 'comoda', category: 'habitacion', photo: 'https://cdn1.mueblesrey.com/2832-large_default/mueble-para-tv-delta.jpg')
+Mueble.create!(sku: 'co-002', name: 'mesa', category: 'living', photo: 'https://cdn.jysk.es/media/catalog/product/cache/9/thumbnail/960x/d34aaef3401395db2614ec4ce2acbbee/3/6/36511001_1__1.jpg')
 puts 'Finished!'

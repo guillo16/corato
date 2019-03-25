@@ -1,0 +1,9 @@
+<h1>Order</h1>
+<ul>
+  <li>Status: <%= @order.state %></li>
+  <li>Item: <%= @order.mueble_sku %></li>
+  <li>Amount: <%= humanized_money_with_symbol(@order.amount) %></li>
+<ul>
+
+
+<%= link_to 'seguir comprando' , muebles_path %>

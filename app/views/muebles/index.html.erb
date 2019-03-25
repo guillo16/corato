@@ -1,17 +1,110 @@
+<div class="main-container">
+  <div id="list">
+
+    <h4>Categorias</h4>
+    <h5> <%= link_to muebles_path(string: "amoladora") do %>Living<% end %></h5>
+    <h5> <%= link_to muebles_path(string: "grupo electrogeno") do %>Cocina<% end %></h5>
+    <h5> <%= link_to muebles_path(string: "motosierra") do %>Dormitorio<% end %></h5>
+    <div style="display:none;" id="myCatDiv">
+      <h5> <%= link_to muebles_path(string: "sierra") do %>Baños<% end %></h5>
+      <h5> <%= link_to muebles_path(string: "taladro") do %>Galeria<% end %></h5>
+    </div>
+    <button id="myCatButton" onClick="myCatFunction(); toggleCatText(this.id);">+ Mas</button>
+
+    <script>
+      function myCatFunction() {
+        var x = document.getElementById("myCatDiv");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function toggleCatText(button_id)  {
+       if (document.getElementById(button_id).innerText == "+ Mas")
+       {
+         document.getElementById(button_id).innerText = "- Menos";
+       }
+       else
+       {
+         document.getElementById(button_id).innerText = "+ Mas";
+       }
+     }
+   </script>
+
+<h4> <button id="myPriceButton" onClick="myPriceFunction(); togglePrice(this.id);">Precio -</button> </h4>
+<div  id="myPrice">
+  <h5> <%= link_to muebles_path(min_price_cents: 1, max_price_cents: 300001) do %>
+    <i class="fas fa-minus"></i> 3.000 $<% end %> </h5>
+    <h5><%= link_to "3.000-6.000 $", muebles_path(min_price_cents: 300001, max_price_cents: 600000) %> </h5>
+    <h5><%= link_to "6.000-10.000 $", muebles_path(min_price_cents: 600001, max_price_cents: 1000000) %></h5>
+    <h5> <%= link_to muebles_path(min_price_cents: 1000001, max_price_cents: 10000000) do %>
+      <i class="fas fa-plus"></i> 10.000 $<% end %> </h5>
+    </div>
+
+    <script>
+      function myPriceFunction() {
+        var x = document.getElementById("myPrice");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function togglePrice(myPriceButton)  {
+       if (document.getElementById(myPriceButton).innerText == "Precio -")
+       {
+         document.getElementById(myPriceButton).innerText = "Precio +";
+       }
+       else
+       {
+         document.getElementById(myPriceButton).innerText = "Precio -";
+       }
+     }
+   </script>
+
+   <h4> <button id="myOrderButton" onClick="myOrderFunction(); toggleOrder(this.id);">Ordenar -</button> </h4>
+   <div  id="myOrder">
+     <h5><%= link_to muebles_path(created_at: :desc) do %>Lo mas reciente<% end %></h5>
+     <h5>  <%= link_to muebles_path(price_cents: :desc) do %>mas alto - mas bajo<% end %></h5>
+   </div>
+   <script>
+    function myOrderFunction() {
+      var x = document.getElementById("myOrder");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function toggleOrder(myOrderButton)  {
+     if (document.getElementById(myOrderButton).innerText == "Ordenar -")
+     {
+       document.getElementById(myOrderButton).innerText = "Ordenar +";
+     }
+     else
+     {
+       document.getElementById(myOrderButton).innerText = "Ordenar -";
+     }
+   }
+ </script>
+
+</div>
 <div class="container">
   <div class="row">
     <h1>muebles</h1>
     <% @muebles.each do |mueble| %>
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <%= link_to image_tag(mueble.photo), mueble_path(mueble) %>
-          <div class="caption">
-            <h3><%= link_to mueble.name, mueble_path(mueble) %></h3>
-            <p><%= mueble.name %></p>
-            <p>Amount: <%= humanized_money_with_symbol(mueble.price) %></p>
-          </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <%= link_to image_tag(mueble.photo), mueble_path(mueble) %>
+        <div class="caption">
+          <h3><%= link_to mueble.name, mueble_path(mueble) %></h3>
+          <p><%= mueble.name %></p>
+          <p>Amount: <%= humanized_money_with_symbol(mueble.price) %></p>
         </div>
       </div>
+    </div>
     <% end %>
   </div>
+</div>
 </div>

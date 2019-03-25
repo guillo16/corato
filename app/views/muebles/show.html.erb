@@ -11,7 +11,12 @@
     <div class="col-sm-12 col-md-6">
       <p>Some awesome description</p>
       <p>Amount: <%= humanized_money_with_symbol(@mueble.price) %></p>
-
+      <div class="pay-button">
+        <%= form_tag orders_path do %>
+        <%= hidden_field_tag 'mueble_id', @mueble.id %>
+        <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+<% end %>
+      </div>
     </div>
   </div>
 </div>

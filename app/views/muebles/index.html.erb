@@ -2,12 +2,12 @@
   <div id="list">
 
     <h4>Categorias</h4>
-    <h5> <%= link_to muebles_path(string: "amoladora") do %>Living<% end %></h5>
-    <h5> <%= link_to muebles_path(string: "grupo electrogeno") do %>Cocina<% end %></h5>
-    <h5> <%= link_to muebles_path(string: "motosierra") do %>Dormitorio<% end %></h5>
+    <h5> <%= link_to muebles_path(category: "living") do %>Living<% end %></h5>
+    <h5> <%= link_to muebles_path(category: "cocina") do %>Cocina<% end %></h5>
+    <h5> <%= link_to muebles_path(category: "habitacion") do %>Dormitorio<% end %></h5>
     <div style="display:none;" id="myCatDiv">
-      <h5> <%= link_to muebles_path(string: "sierra") do %>Baños<% end %></h5>
-      <h5> <%= link_to muebles_path(string: "taladro") do %>Galeria<% end %></h5>
+      <h5> <%= link_to muebles_path(category: "banos") do %>Baños<% end %></h5>
+      <h5> <%= link_to muebles_path(category: "galeria") do %>Galeria<% end %></h5>
     </div>
     <button id="myCatButton" onClick="myCatFunction(); toggleCatText(this.id);">+ Mas</button>
 

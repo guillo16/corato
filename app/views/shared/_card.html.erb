@@ -1,0 +1,31 @@
+<div class="product-item">
+  <div class="product-item-inner">
+    <div class="product-item-photo-group">
+      <%= image_tag((mueble.photo), :class => "product-item-photo")%>
+      <div class="product-item-favourite">
+        <i class="far fa-heart "></i>
+      </div>
+    </div>
+    <div class="product-item-rating">
+      <ul class= "list-inline product-item-stars">
+        <li>
+          <% 4.times do %>
+          <i class="fas fa-star rated"></i>
+          <% end %>
+          <% else %>
+          <% 1.times do %>
+          <i class="fas fa-star not-rated"></i>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+    <div class="product-item-info">
+      <h2><%= link_to mueble.name, mueble_path(mueble) %></h2>
+      <p>Mesa cuadrada ideal para 4 personas, ideal para espacios pequeños</p>
+    </div>
+    <div class="product-item-price">
+      <h2>Amount: <%= humanized_money_with_symbol(mueble.price) %></h2>
+    </div>
+  </div>
+</div>
+

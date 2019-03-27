@@ -1,0 +1,43 @@
+.show-title-group {
+  border-bottom: 1px solid #dbdbdb;
+  margin: 10px;
+}
+
+.show-title {
+  font: normal 28px/1.2em "Open Sans" !important;
+  color: #222222!important;
+  padding: 6px 0px 6px 0px;
+}
+
+.wrapper {
+  background-color: white;
+
+}
+
+.show-item-photo {
+  height: 80vh;
+  border-radius: 3px;
+  background-position: center;
+  background-size: cover !important;
+  margin: 30px 20px;
+  flex: 1 0 50%;
+}
+
+.show-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+        max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.show-info-window {
+  flex: 1 0 35%;
+      padding-left: 0;
+    padding-right: 0;
+    margin-top: 40px;
+    float: left;
+    width: 37%;
+    margin-left: 3%;
+}

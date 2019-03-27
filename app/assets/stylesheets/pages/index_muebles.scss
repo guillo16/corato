@@ -5,6 +5,7 @@
 // list content
 
 #list {
+ padding-top: 20px;
  flex: 0 0 200px;
  height: 100%;
  height: 100vh;
@@ -13,14 +14,14 @@
  background-color: #fafafa;
 
 h4 {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   margin-left: 10px;
   padding-top: 5px;
 }
 
 a {
-  font-size: 15px;
+  font-size: 13px;
   color: black;
   margin-left: 25px;
   &:hover {
@@ -44,7 +45,7 @@ a {
 }
 
 #myPriceButton {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   margin-left: 0px;
   margin-top: 20px;
@@ -57,7 +58,7 @@ a {
 }
 
 #myOrderButton {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   margin-left: 0px;
   margin-top: 20px;
@@ -70,7 +71,7 @@ a {
 }
 
 #myMarcaButton{
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   margin-left: 0px;
   background-color: #fafafa;
@@ -83,4 +84,45 @@ a {
 }
 
 // Cards Content
+
+.index-wrapper {
+  background-color: white;
+  padding: 20px;
+}
+#product-archive {
+  margin-top: 30px;
+  span {
+  background: #ffffff;
+  padding-right: .5em;
+
+}
+  h1 {
+
+  line-height: 2px !important;
+  border-top: 1px solid #dbdbdb;
+  }
+}
+#index-wrapper {
+  header {
+  border-top: 1px solid red;
+  line-height: 1em !important;
+  display: block;
+  }
+}
+
+.page-title {
+  font: normal 28px/1.2em "Open Sans" !important;
+  color: #222222!important;
+  margin: 0 0 0.5em;
+}
+.page-title {
+
+  margin: 0 0 0.5em;
+}
+#product-archive {
+  span {
+  background: #ffffff;
+  padding-right: .5em;
+  }
+}
 

@@ -2,7 +2,7 @@
 .product-item {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
   padding: 20px;
   margin: 0px;
 }
@@ -13,7 +13,7 @@
 }
 .product-item-photo {
   height: 300px;
-  border-radius: 10px;
+  border-radius: 3px;
   background-position: center;
   background-size: cover !important;
 }
@@ -55,7 +55,7 @@
 
 .product-item-stars {
   margin: 0px;
-  padding-left: 10px;
+  padding-left: 16px;
   font-size: 12px;
 }
 
@@ -64,13 +64,15 @@
 }
 
 .product-item-price {
-
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
 }
-
 
 .content {
   display: flex;
 }
+
 .card-container  {
   flex-grow: 1;
   display: grid;
@@ -78,11 +80,6 @@
   grid-gap: 16px;
   padding: 16px;
 }
-
-
-/*needed for old page, remove after merge of new frontend module*/
-
-/*Media Queries*/
 
 /*Smallest device*/
 @media (min-width: 100px) and (max-width: 749px) {

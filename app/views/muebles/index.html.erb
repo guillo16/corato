@@ -91,14 +91,18 @@
 
  </div>
  <div class="index-wrapper">
-  <h1>muebles</h1>
-    <div class="row">
-      <div class="a card-container">
-        <% @muebles.each do |mueble| %>
-        <%= render "shared/card", mueble: mueble%>
-        <% end %>
-      </div>
-    </div>
+  <header id="product-archive">
+    <h1 class="page-title">
+      <span>Muebles</span>
+    </h1>
+ </header>
+ <div class="row">
+  <div class="a card-container">
+    <% @muebles.each do |mueble| %>
+    <%= render "shared/card", mueble: mueble%>
+    <% end %>
   </div>
+</div>
+</div>
 </div>
 

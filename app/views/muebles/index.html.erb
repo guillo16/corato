@@ -36,8 +36,8 @@
    <div  id="myPrice">
     <h5> <%= link_to muebles_path(min_price_cents: 1, max_price_cents: 300001) do %>
       <i class="fas fa-minus"></i> 3.000 $<% end %> </h5>
-      <h5><%= link_to "3.000-6.000 $", muebles_path(min_price_cents: 300001, max_price_cents: 600000) %> </h5>
-      <h5><%= link_to "6.000-10.000 $", muebles_path(min_price_cents: 600001, max_price_cents: 1000000) %></h5>
+      <h5><%= link_to "3.000 - 6.000 $", muebles_path(min_price_cents: 300001, max_price_cents: 600000) %> </h5>
+      <h5><%= link_to "6.000 - 10.000 $", muebles_path(min_price_cents: 600001, max_price_cents: 1000000) %></h5>
       <h5> <%= link_to muebles_path(min_price_cents: 1000001, max_price_cents: 10000000) do %>
         <i class="fas fa-plus"></i> 10.000 $<% end %> </h5>
       </div>
@@ -65,8 +65,8 @@
 
      <h4> <button id="myOrderButton" onClick="myOrderFunction(); toggleOrder(this.id);">Ordenar -</button> </h4>
      <div  id="myOrder">
-       <h5><%= link_to muebles_path(created_at: :desc) do %>Lo mas reciente<% end %></h5>
-       <h5>  <%= link_to muebles_path(price_cents: :desc) do %>mas alto - mas bajo<% end %></h5>
+       <h5><%= link_to muebles_path(created_at: :desc) do %>Lo más reciente<% end %></h5>
+       <h5>  <%= link_to muebles_path(price_cents: :desc) do %>Más alto - más bajo<% end %></h5>
      </div>
      <script>
       function myOrderFunction() {
@@ -90,14 +90,19 @@
    </script>
 
  </div>
- <div class="container">
-  <h1>muebles</h1>
-  <div class="row">
-    <div class="a">
-      <% @muebles.each do |mueble| %>
-      <%= render "shared/card", mueble: mueble%>
-      <% end %>
-    </div>
+ <div class="index-wrapper">
+  <header id="product-archive">
+    <h1 class="page-title">
+      <span>Muebles</span>
+    </h1>
+ </header>
+ <div class="row">
+  <div class="a card-container">
+    <% @muebles.each do |mueble| %>
+    <%= render "shared/card", mueble: mueble%>
+    <% end %>
   </div>
+</div>
+</div>
 </div>
 

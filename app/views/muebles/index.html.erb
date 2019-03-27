@@ -95,14 +95,15 @@
     <h1 class="page-title">
       <span>Muebles</span>
     </h1>
- </header>
- <div class="row">
-  <div class="a card-container">
-    <% @muebles.each do |mueble| %>
-    <%= render "shared/card", mueble: mueble%>
-    <% end %>
+  </header>
+  <div class="row">
+    <div class="a card-container">
+      <% @muebles.each do |mueble| %>
+
+      <%= render "shared/card", mueble: mueble%>
+      <% end %>
+    </div>
   </div>
-</div>
 </div>
 </div>
 

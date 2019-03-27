@@ -4,27 +4,24 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 20px;
-  margin: 15px;
-}
-
-.product-item > img {
-  height: 100%;
-  width: 200px;
-  object-fit: cover;
+  margin: 0px;
 }
 
 .product-item-photo-group {
   position: relative;
+  padding: 10px;
 }
 .product-item-photo {
-  padding: 10px;
-  border-radius: 15px;
+  height: 300px;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover !important;
 }
 
 .product-item-favourite {
  position: absolute;
- top: 15px;
- right: 15px;
+ top: 20px;
+ right: 20px;
  font-size: 28px;
  background-color: rgba(250, 250, 0, 0.8);
  width: 40px;
@@ -68,4 +65,42 @@
 
 .product-item-price {
 
+}
+
+
+.content {
+  display: flex;
+}
+.card-container  {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+}
+
+
+/*needed for old page, remove after merge of new frontend module*/
+
+/*Media Queries*/
+
+/*Smallest device*/
+@media (min-width: 100px) and (max-width: 749px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 750px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 1200px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

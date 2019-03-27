@@ -1,8 +1,10 @@
 <div class="product-item">
   <div class="product-item-inner">
     <div class="product-item-photo-group">
+      <%= link_to mueble_path(mueble) do %>
       <div class="product-item-photo" style="background-image: url('<%= image_path mueble.photo%>'); width: 100%;">
       </div>
+      <% end %>
       <div class="product-item-favourite">
         <i class="far fa-heart "></i>
       </div>

@@ -1,20 +1,34 @@
 
 <div class="wrapper">
 
-      <div class="show-body">
-        <div class="show-item-photo" style="background-image: url('<%= image_path @mueble.photo%>'); width: 100%;">
+  <div class="show-body">
+    <div class="show-photo-section">
+      <div class="show-main-photo">
+        <div class="show-item-photo">
+          <%= image_tag(@mueble.photo, width: '100%', :class=> 'show-item-photo-two') %>
         </div>
-        <div class="show-info-window">
-          <h1 class="show-title"><%= @mueble.name.upcase %></h1>
-          <p>Mesa cuadrada ideal para 4 personas, ideal para espacios pequeños</p>
-          <p>Total: <%= humanized_money_with_symbol(@mueble.price) %></p>
-          <div class="pay-button">
-            <%= form_tag orders_path do %>
-            <%= hidden_field_tag 'mueble_id', @mueble.id %>
-            <%= submit_tag 'Comprar', class: 'btn btn-primary' %>
-            <% end %>
-          </div>
+      </div>
+    </div>
+    <div class="show-info-window">
+      <h1 class="show-title"><%= @mueble.name.upcase %></h1>
+      <p class="show-description">Mesa cuadrada ideal para 4 personas, ideal para espacios pequeños</p>
+      <p class="show-item">ITEM #:<%= @mueble.sku.upcase %></p>
+      <p class="show-item"> <span>DISPONIBILIDAD:</span> <i class="fas fa-check"></i><span>EN STOCK </span></p>
+      <p class="show-price"><%= humanized_money_with_symbol(@mueble.price) %></p>
+      <div class="show-payment-group">
+        <span>CANT.</span>
+        <div class="show-box-qty">
+          <p>1</p>
         </div>
+        <div class="pay-button">
+          <%= form_tag orders_path do %>
+          <%= hidden_field_tag 'mueble_id', @mueble.id %>
+          <%= submit_tag 'Agregar al carrito', class: '  button-order' %>
+          <% end %>
+        </div>
+        <div class="show-box"><i class="far fa-heart"></i></div>
+      </div>
+    </div>
 
   </div>
 </div>

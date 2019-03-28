@@ -1,43 +1,127 @@
-.show-title-group {
-  border-bottom: 1px solid #dbdbdb;
-  margin: 10px;
-}
-
-.show-title {
-  font: normal 28px/1.2em "Open Sans" !important;
-  color: #222222!important;
-  padding: 6px 0px 6px 0px;
-}
-
 .wrapper {
   background-color: white;
-
 }
-
-.show-item-photo {
-  height: 80vh;
-  border-radius: 3px;
-  background-position: center;
-  background-size: cover !important;
-  margin: 30px 20px;
-  flex: 1 0 50%;
-}
-
 .show-body {
   display: flex;
   justify-content: space-between;
   align-items: top;
-        max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
+
+.show-photo-section {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  flex: 1 0 60%;
+}
+
+.show-main-photo {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+.show-item-photo {
+  height: 50vh;
+  margin: 20px 10px;
+}
+
+.show-item-photo-two {
+  border-radius: 3px;
+  margin: auto;
+  width: auto;
+  max-height: 100%;
+}
+
 
 .show-info-window {
   flex: 1 0 35%;
-      padding-left: 0;
-    padding-right: 0;
-    margin-top: 40px;
-    float: left;
-    width: 37%;
-    margin-left: 3%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 40px;
+  float: left;
+  width: 37%;
+  margin-left: 1%;
+  margin-right: 3%;
+}
+.show-title-group {
+  margin: 10px;
+}
+
+.show-title {
+  border-bottom: 1px solid #dbdbdb;
+  color: #444444!important;
+  padding: 6px 0px 4px 0px;
+  float: left;
+  width: 100%;
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: normal;
+  font-weight: 400;
+
+}
+
+.show-description {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  color: #333333;
+  margin-bottom: 18px;
+}
+
+.show-item {
+  font: normal 13px "Open Sans" !important;
+  margin-bottom: 8px !important;
+  i {
+    padding: 0px 5px;
+  }
+}
+
+.show-price {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 13px;
+}
+
+.show-payment-group {
+  line-height: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.show-box {
+  border: 1px solid #dbdbdb;
+  padding: 12px 15px;
+  line-height: 12px;
+  margin-left: 5px;
+}
+
+.show-box-qty {
+  border: 1px solid #dbdbdb;
+  height: 41px;
+  width: 48px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px 5px;
+  p {
+    padding: 0px 15px;
+    margin: 0px;
+    text-align: center;
+    font-size: 14px;
+  }
 }
